@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <!--This is how we style the document and make it look asethically pleasing-->
+    <style>
+        header {
+            color: #cc3433;
+            padding: 2rem 1rem;
+            max-width: 800px;
+            width: 100;
+            margin: 0 auto;
+            text-align: center;
+            font-family: normal;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 200;
+            margin-bottom: 1rem;
+        }
+
+        #new-task-form {
+            display: flex;
+        }
+
+        input,
+        button {
+            appearance: none;
+            border: #cc3433;
+            outline: white;
+            background: none;
+        }
+
+        #new-task-input {
+            flex: 1 1 auto;
+            background-color: #cc3433;
+            padding: .3rem;
+            border-radius: .3rem;
+            margin-right: .3rem;
+            color: black;
+            font-style: normal;
+            font-weight: 850;
+        }
+
+        #new-task-input::placeholder {
+            color: #0e3386;
+        }
+
+        #new-task-submit {
+            color: #0e3386;
+            background-color: #cc3433;
+            padding: .3rem;
+            border-radius: .3rem;
+            font-weight: 850;
+            display: inline-block;
+            font-style: normal;
+            cursor: pointer;
+        }
+
+        #new-task-submit:active {
+            opacity: .5;
+        }
+
+        body {
+            background-color: #0e3386;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            text-align: center;
+            color: #cc3433;
+            flex: 1 1 auto;
+        }
+
+        .task-list {
+            padding: .4rem;
+        }
+
+        .task-list h2 {
+            font-weight: 850;
+            color: #cc3433;
+            margin-bottom: 1rem;
+        }
+
+        #tasks .tasks {
+            display: flex;
+            text-align: center;
+            justify-content: space-between;
+            background-color: #cc3433;
+            border-radius: 1rem;
+        }
+
+         .tasks .content .text{
+            color: #a8b6d6 !important;
+            padding: .3rem;
+            font-style: normal;
+            font-weight: 800;
+            display: block;
+        }
+        
+        
+        .tasks .content .text::placeholder {
+            color: #0e3386;
+            padding: .3rem;
+            font-style: normal;
+            font-weight: 800;
+            display: block;
+        }
+
+        #tasks .tasks .actions {
+            display: flex;
+        }
+
+        #tasks .actions button {
+            cursor: pointer;
+            font-weight: 800;
+        }
+
+        #tasks .actions .delete {
+            color: #0e3386;
+            padding: .3rem;
+            font-style: normal;
+            font-weight: 800;
+            display: block;
+        }
+
+        #tasks .actions .update {
+            color: #0e3386;
+            padding: .3rem;
+            font-style: normal;
+            font-weight: 800;
+            display: block;
+        }
+    </style>
+    <!--The body of our form containing our form of adding and main tags with 2 buttons of update and delete-->
+    <body>
+        <header>
+            <h1>To-Do List</h1>
+            <form id="new-task-form" method="post">
+                <label for="item">TODO:</label>
+                <input type="text" id="new-task-input" name="tasks" placeholder="add here" />
+                <input type="submit" id="new-task-submit" name="add" />
+            </form>
+        </header>
+        <main>
+            <section class="task-list">
+                <h2>Tasks</h2>
+                <div id="tasks">
+                    <div class="tasks">
+                        <div class="content">
+                            <input type="text" class="text" placeholder="update here" readonly />
+                        </div>
+                        <div class="actions">
+                            <button class="update">Update</button>
+                            <button class="delete">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src="Main.js" type="text/javascript">
+        </script>
+    </body>
+
+</html>
