@@ -87,16 +87,8 @@ function doTasks(event) {
     updateButton.addEventListener('click', function (event) {
         event.preventDefault();
         //we need to get the task from the input    
-        let task = input.value;
-        //we need to get the task from the list
-        document.getElementById("tasks").innerHTML = task;
-
-
-
-
-
-        
-
+        //we need to get the task from the list    
+        contents.innerHTML = "<strike>" + task + "</strike>";
     });
 
     deleteButton.addEventListener('click', function (event) {
@@ -104,10 +96,3 @@ function doTasks(event) {
         list.removeChild(item);
     });
 }
-
-
-
-
-
-
-
